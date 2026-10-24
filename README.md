@@ -4,16 +4,14 @@ SkillBridge AI is a full-stack platform that connects student skills with releva
 
 The platform provides separate experiences for students, industry users, academicians, and institutions. Candidate-role matching uses deterministic scoring based on skill requirements, while an optional local Ollama layer can explain the results without modifying the underlying scores.
 
-## Features
+1. `cd backend && python -m pip install -r requirements.txt`
+2. Copy `backend/.env.example` to `backend/.env`; set strong `SECRET_KEY` and `JWT_SECRET_KEY`. The default database is `database/skillbridge.db`.
+3. From `backend/`: `python -m flask --app run.py db upgrade`, then `python seed_reference_data.py` if role/skill catalogs are empty.
+4. Optional demo: `DEMO_PASSWORD='choose-a-local-demo-password' python seed_demo.py --reset-passwords`. It creates the four demo role logins and reuses the five `student1@test.com` through `student5@test.com` accounts, adding missing skill/portfolio data and submitting their applications. The reset flag updates only these named demo/test accounts. Existing portfolios, job requirements, owners and application statuses are preserved.
+5. From `backend/`: `python run.py`.
+6. From `frontend/`: `npm install && npm run dev`. Open `http://localhost:5173`.
 
-### Student
-- Create and manage a student profile
-- Track skills and assessment results
-- View skill scores and role matches
-- Explore industry opportunities
-- Apply for opportunities
-- Maintain a digital skill passport
-- Upload resume data for profile enrichment
+The Vite development server proxies `/api` to Flask on port 5001 by default and follows `PORT` from the root/backend `.env`. Use `API_PROXY_TARGET` in the frontend environment for an explicit override. On macOS, port 5000 may be occupied by AirPlay; use port 5001 and restart both servers. Keep `VITE_API_BASE_URL=/api` for local development. For a separate frontend deployment, set `VITE_API_BASE_URL` to the full API URL and configure `CORS_ORIGINS` on the backend. The Ollama runtime is optional; see `backend/README.md` for local AI configuration and resume support.
 
 ### Industry
 - Create and manage company profiles
