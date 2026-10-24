@@ -59,7 +59,7 @@ The platform provides separate experiences for students, industry users, academi
 - SQLite
 
 ### AI
-- Ollama (Optional, local)
+- Ollama 
 
 ## Architecture
 
