@@ -1,4 +1,4 @@
-# SkillBridge AI
+# SkillBridge 
 
 SkillBridge AI is a full-stack platform that connects student skills with relevant industry opportunities through skill assessment, role matching, and personalized insights.
 
