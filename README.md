@@ -1,6 +1,6 @@
 # SkillBridge 
 
-SkillBridge AI is a full-stack platform that connects student skills with relevant industry opportunities through skill assessment, role matching, and personalized insights.
+SkillBridge is a full-stack platform that connects student skills with relevant industry opportunities through skill assessment, role matching, and personalized insights.
 
 The platform provides separate experiences for students, industry users, academicians, and institutions. Candidate-role matching uses deterministic scoring based on skill requirements, while an optional local Ollama layer can explain the results without modifying the underlying scores.
 
@@ -110,4 +110,4 @@ SkillBridge-AI/
 ```
 ## Project Status
 
-SkillBridge AI is an academic full-stack project focused on connecting student skills with relevant industry and academic opportunities through deterministic skill matching and role-based workflows.
+SkillBridge is an academic full-stack project focused on connecting student skills with relevant industry and academic opportunities through deterministic skill matching and role-based workflows.
